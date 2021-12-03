@@ -9,7 +9,7 @@ p1 =: (#.@:c * #.@:b) in
 NB. Adverb to find all rows that match the criteria 'u'
 w =: {{ }."1 @: (#~ ([: ([ = u) {."1)) }}
 
-h =: {{ ($: @: (u w)) ` ({:"1) @. (# = 1:) (,. #.) y }}
+h =: {{ {:"1 (u w)^:(# > 1:)^:_ (,. #.) y }}
 
 p2 =: (b h * c h) in
 
